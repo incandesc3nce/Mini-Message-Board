@@ -15,8 +15,8 @@ app.use(express.static(assetsPath));
 app.set('views', path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
 
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:3000`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running.`);
 });
