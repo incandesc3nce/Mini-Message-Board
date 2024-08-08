@@ -20,7 +20,17 @@ const messages: Message[] = [
 const indexRouter: Router = Router();
 
 indexRouter.get('/', (req: Request, res: Response) => {
-  res.render('index', { title: 'Mini Messageboard', messages: messages });
+  res.render('index', { title: 'MMB - Messages', messages: messages });
+});
+
+indexRouter.get('/messages/:id', (req: Request, res: Response) => {
+  const { id } = req.params;
+  const message = messages.find((m) => m.id === id);
+  if (!message) {
+    return res.status(404).send('Message not found');
+  }
+
+  res.render('message', { title: 'MMB - Message Detail', message: message });
 });
 
 indexRouter.post('/new', (req: Request, res: Response) => {
