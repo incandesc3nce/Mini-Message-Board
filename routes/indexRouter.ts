@@ -2,7 +2,6 @@ import { Router, Request, Response } from 'express';
 import Message from '../types/Message';
 import { randomUUID } from 'crypto';
 import formatDate from '../helpers/formatDate';
-import { format } from 'path';
 
 const messages: Message[] = [
   {
