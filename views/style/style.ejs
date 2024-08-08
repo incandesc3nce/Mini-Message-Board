@@ -1,0 +1,133 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --body-bg: #282828;
+    --message-bg: #3f3f3f;
+    --btn-bg: #6a41b2;
+    --header-color: #542aa8;
+    --text-color: #ffffff;
+    --border-color: #111;
+
+    --side-padding: 2rem; 
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--body-bg);
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  header {
+    background-color: var(--header-color);
+    color: var(--text-color);
+    padding: 1rem var(--side-padding);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  header h1 a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  #content {
+    padding: 1rem var(--side-padding);
+  }
+
+  .top-content-wrapepr {
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    max-width: 1200px;
+    width: clamp(90vw, 80%, 1200px);
+  }
+
+  .top-content a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--btn-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+  }
+
+  
+  #messages {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message-wrapper {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+    padding: 1rem 0;
+    max-width: 1200px;
+    width: clamp(90vw, 80%, 1200px);
+  }
+
+  .message {
+    background-color: var(--message-bg);
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .message-text {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-msg {
+    padding: 2rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem
+  }
+
+  .open-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .open-msg {
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--btn-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1rem;
+  }
+
+
+  .top-content a, .open-msg {
+    transition: background-color 0.3s;
+  }
+
+  .top-content a:hover, .open-msg:hover {
+    background-color: var(--header-color);
+  }
+</style>
