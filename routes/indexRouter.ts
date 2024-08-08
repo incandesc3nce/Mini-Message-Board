@@ -22,7 +22,7 @@ const messages: Message[] = [
 const indexRouter: Router = Router();
 
 indexRouter.get('/', (req: Request, res: Response) => {
-  res.send('Hello, TypeScript Express!');
+  res.render('index', { title: 'Mini Messageboard', messages: messages});
 });
 
 export default indexRouter;
