@@ -6,16 +6,34 @@ import formatDate from '../helpers/formatDate';
 const messages: Message[] = [
   {
     id: randomUUID(),
-    text: 'Hi there!',
-    user: 'John',
+    text: "There are no hard things, only things you don't understand yet.",
+    user: 'incandesc3nce',
     added: formatDate(new Date(), 'en-US'),
   },
   {
     id: randomUUID(),
-    text: 'Hello, World!',
-    user: 'Charles',
+    text: "Our doubts are traitors and make us lose the good we oft might win, by fearing to attempt.",
+    user: 'William Shakespeare, Measure for Measure',
     added: formatDate(new Date(), 'en-US'),
   },
+  {
+    id: randomUUID(),
+    text: "In the end, we only regret the chances we didn't take.",
+    user: 'Lewis Carroll',
+    added: formatDate(new Date(), 'en-US'),
+  },
+  {
+    id: randomUUID(),
+    text: "Of all sad words of tongue or pen, the saddest are these, 'It might have been.'",
+    user: 'John Greenleaf Whittier',
+    added: formatDate(new Date(), 'en-US'),
+  },
+  {
+    id: randomUUID(),
+    text: "Hey, let's go bowling!",
+    user: 'Roman Bellic',
+    added: formatDate(new Date(), 'en-US'),
+  }
 ];
 
 const indexRouter: Router = Router();
