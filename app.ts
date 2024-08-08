@@ -4,6 +4,7 @@ import messageRouter from './routes/messageRouter';
 import path from 'path';
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter);
 app.use('/new', messageRouter);
