@@ -1,10 +1,5 @@
 import { Router, Request, Response } from 'express';
-
-type Message = {
-  text: string,
-  user: string,
-  added: Date
-};
+import Message from '../types/Message';
 
 const messages: Message[] = [
   {
