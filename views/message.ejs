@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= title %>
-  </title>
-</head>
-<body>
-  <%- include('header/header') %>
-  <div id="content">
-    <h2>Message Detail</h2>
-    <div>
-      <p><%= message.text %></p>
-      <p>By: <b><%= message.user %></b></p>
-      <p>Added on: <%= message.added %></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('header/header') %>
+    <div id="content">
+      <h2>Message Detail</h2>
+      <div>
+        <p><%= message.text %></p>
+        <p>By: <b><%= message.user %></b></p>
+        <p>Added on: <%= message.added %></p>
+      </div>
+      <a href="/">Back to all messages</a>
     </div>
-    <a href="/">Back to all messages</a>
-  </div>
-</body>
+  </body>
 </html>
