@@ -2,7 +2,7 @@
 
 Simple website that uses only Node.js for routing and rendering, and no front-end framework. It allows users to post messages and view them.
 
-🔥[Live Preview](https://mmb-incandesc3nce.up.railway.app/)🔥
+🔥[Live Preview](https://mini-message-board-vg3o.onrender.com/)🔥
 
 ## Installation
 
