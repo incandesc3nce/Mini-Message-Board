@@ -2,7 +2,7 @@ type Message = {
   id: string,
   text: string,
   user: string,
-  added: Date
+  added: string
 };
 
 export default Message;

@@ -1,19 +1,21 @@
 import { Router, Request, Response } from 'express';
 import Message from '../types/Message';
 import { randomUUID } from 'crypto';
+import formatDate from '../helpers/formatDate';
+import { format } from 'path';
 
 const messages: Message[] = [
   {
     id: randomUUID(),
     text: 'Hi there!',
     user: 'John',
-    added: new Date(),
+    added: formatDate(new Date(), 'en-US'),
   },
   {
     id: randomUUID(),
     text: 'Hello, World!',
     user: 'Charles',
-    added: new Date(),
+    added: formatDate(new Date(), 'en-US'),
   },
 ];
 
@@ -43,7 +45,7 @@ indexRouter.post('/new', (req: Request, res: Response) => {
     id: randomUUID(),
     user,
     text,
-    added: new Date(),
+    added: formatDate(new Date(), 'en-US'),
   };
   messages.unshift(newMessage);
 
