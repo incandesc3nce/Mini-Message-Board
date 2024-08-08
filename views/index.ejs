@@ -17,6 +17,7 @@
           <p><%= message.text %></p>
           <p>Added: <%= message.added %></p>
           <p>By <%= message.user %></p>
+          <a href="/messages/<%= message.id %>">Open</a>
         </li>
       <% }) %>
     </ul>

@@ -1,13 +1,16 @@
 import { Router, Request, Response } from 'express';
 import Message from '../types/Message';
+import { randomUUID } from 'crypto';
 
 const messages: Message[] = [
   {
+    id: randomUUID(),
     text: 'Hi there!',
     user: 'John',
     added: new Date(),
   },
   {
+    id: randomUUID(),
     text: 'Hello, World!',
     user: 'Charles',
     added: new Date(),
@@ -27,6 +30,7 @@ indexRouter.post('/new', (req: Request, res: Response) => {
   }
 
   const newMessage: Message = {
+    id: randomUUID(),
     user,
     text,
     added: new Date(),
