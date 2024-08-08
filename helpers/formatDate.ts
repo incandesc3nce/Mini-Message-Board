@@ -6,7 +6,6 @@ const options: Intl.DateTimeFormatOptions = {
   minute: 'numeric',
   second: 'numeric',
 };
-const locale = 'en-US';
 
 const formatDate = (date: Date, locale: string): string => {
   return new Intl.DateTimeFormat(locale, options).format(date);
