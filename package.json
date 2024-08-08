@@ -9,6 +9,7 @@
   "author": "incandesc3nce",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.19.2"
   },
   "devDependencies": {
