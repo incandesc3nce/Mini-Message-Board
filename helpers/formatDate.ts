@@ -5,6 +5,7 @@ const options: Intl.DateTimeFormatOptions = {
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
+  hour12: false,
 };
 
 const formatDate = (date: Date, locale: string): string => {
