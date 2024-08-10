@@ -5,11 +5,19 @@ const getMessages = async () => {
   return rows;
 };
 
-const getMessage = async (id: string) => {
+const getMessage = async (id: number) => {
   const { rows } = await pool.query('SELECT * FROM messages WHERE id = $1', [
     id,
   ]);
   return rows[0];
 };
 
-export { getMessages, getMessage };
+const addMessage = async (user: string, text: string) => {
+  const { rows } = await pool.query(
+    'INSERT INTO messages (user, text) VALUES ($1, $2)',
+    [user, text]
+  );
+  return rows[0];
+}
+
+export { getMessages, getMessage, addMessage };
