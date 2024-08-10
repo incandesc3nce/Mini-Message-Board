@@ -29,7 +29,6 @@ indexRouter.get('/messages/:id', async (req: Request, res: Response) => {
   const id = Number(req.params.id);
   const message: Message = await getMessage(id);
   message.added = formatDate(new Date(message.added), locale);
-  console.log(message);
   if (!message) {
     return res.status(404).send('Message not found');
   }
