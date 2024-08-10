@@ -9,8 +9,8 @@ const getMessages = async () => {
 }
 
 const getMessage = async (id: number) => {
-  const messages: Message[] = await db.getMessage(id);
-  return messages;
+  const message: Message = await db.getMessage(id);
+  return message;
 }
 
 const indexRouter: Router = Router();
@@ -23,13 +23,13 @@ indexRouter.get('/', async (req: Request, res: Response) => {
     m.added = formatDate(date, locale);
   });
   res.render('index', { title: 'MMB - Messages', messages: messages });
-  console.log(messages)
 });
 
 indexRouter.get('/messages/:id', async (req: Request, res: Response) => {
   const id = Number(req.params.id);
-  const messages: Message[] = await getMessage(id);
-  const message = messages.find((m) => m.id === id);
+  const message: Message = await getMessage(id);
+  message.added = formatDate(new Date(message.added), locale);
+  console.log(message);
   if (!message) {
     return res.status(404).send('Message not found');
   }
