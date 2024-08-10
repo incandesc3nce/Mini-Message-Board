@@ -38,13 +38,13 @@ indexRouter.get('/messages/:id', async (req: Request, res: Response) => {
 });
 
 indexRouter.post('/new', async (req: Request, res: Response) => {
-  const { user, text } = req.body;
-  if (!user || !text) {
+  const { username, text } = req.body;
+  if (!username || !text) {
     return res.status(400).send('User and text are required');
   }
 
-  await db.addMessage(user, text);
-
+  await db.addMessage(username, text);
+  
   res.redirect('/');
 });
 
