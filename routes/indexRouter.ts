@@ -2,7 +2,6 @@ import { Router, Request, Response } from 'express';
 import Message from '../types/Message';
 import formatDate from '../helpers/formatDate';
 import { db } from '../db/exportQueries';
-import { log } from 'console';
 
 const getMessages = async () => {
   const messages: Message[] = await db.getMessages();
