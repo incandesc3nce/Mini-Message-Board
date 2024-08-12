@@ -13,6 +13,10 @@ app.use('/new', messageRouter);
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
+app.get('*', function(req, res){
+  res.status(404).send('Could not find requested page');
+});
+
 app.set('views', path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
 
