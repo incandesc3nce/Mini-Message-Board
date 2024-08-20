@@ -6,12 +6,10 @@ import path from 'path';
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/new', messageRouter);
-
-const assetsPath = path.join(__dirname, "public");
-app.use(express.static(assetsPath));
 
 app.get('*', function(req, res){
   res.status(404).send('Could not find requested page');
@@ -24,5 +22,5 @@ const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || 'localhost';
 
 app.listen(PORT, HOST, () => {
-  console.log(`Server running.`);
+  console.log(`Server running at http://${HOST}:${PORT}.`);
 });
