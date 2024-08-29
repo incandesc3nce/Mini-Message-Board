@@ -2,7 +2,10 @@
 
 Simple website that uses only Node.js for routing and rendering, and no front-end framework. It allows users to post messages and view them.
 
-🔥[Live Preview](https://mini-message-board-vg3o.onrender.com/)🔥
+## Live Preview
+Live Preview is available at: 
+- [Railway](https://inventory-application-production-4134.up.railway.app/) (faster page load time)
+- [Render](https://mini-message-board-vg3o.onrender.com/) (use if Railway isn't available)
 
 ## Installation
 
