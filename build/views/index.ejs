@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('header/header') %>
+    <div id="content">
+      <div class="top-content-wrapepr">
+        <div class="top-content">
+          <h2>Messages</h2>
+          <a href="/new">Add a new message</a>
+        </div>
+      </div>
+      <ul id="messages">
+        <% messages.map((message) => { %>
+        <div class="message-wrapper">
+          <li class="message">
+            <p class="message-text"><%= message.text %></p>
+            <div class="info-msg">
+              <p>By: <b><%= message.username %></b></p>
+              <p><%= message.added %></p>
+            </div>
+          </li>
+          <div class="open-container">
+            <a href="/messages/<%= message.id %>" class="open-msg">Open</a>
+          </div>
+        </div>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>

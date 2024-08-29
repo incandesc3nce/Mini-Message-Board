@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('header/header') %>
+    <div id="content">
+      <h2 class="heading">Message Detail</h2>
+      <div class="message-wrapper">
+        <div class="message">
+          <p class="message-text"><%= message.text %></p>
+          <div class="info-msg">
+            <p>By: <b><%= message.username %></b></p>
+            <p>Added on: <%= message.added %></p>
+          </div>
+        </div>
+        <div class="open-container">
+          <a href="/" class="back-btn">Back to all messages</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

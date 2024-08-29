@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('header/header') %>
+    <div id="content">
+      <h2 class="heading">New Message</h2>
+      <form method="post" action="/new">
+        <label for="username">
+          <span>Author:</span>
+          <input type="text" name="username" id="username" required />
+        </label>
+        <label for="text">
+          <span>Message:</span>
+          <textarea name="text" id="text" required></textarea>
+        </label>
+        <div class="submit-btn-container"><button type="submit" class="submit-btn">Add</button></div>
+      </form>
+    </div>
+  </body>
+</html>
